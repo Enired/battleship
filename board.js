@@ -7,7 +7,8 @@ const generateBoard = function(){
   for(let rowIndex = rowStart; rowIndex <= rowEnd; rowIndex++){
     let row = [];
     for(let columnIndex = 0; columnIndex < columns.length; columnIndex++){
-      row.push(`${columns[columnIndex]}${rowIndex}`);
+      let space = {space : `${columns[columnIndex]}${rowIndex}`, shipPresent : false}
+      row.push(space);
     }
     board.push(row);
   }
